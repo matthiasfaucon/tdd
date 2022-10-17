@@ -1,5 +1,5 @@
 import { assert } from 'chai'
-import { sum, sayHello } from '../demo/demo.js'
+import { sum, sayHello, getUsers } from '../demo/demo.js'
 
 describe('sum()', function(){
     it('sum should return a+b', function(){
@@ -10,6 +10,18 @@ describe('sum()', function(){
 describe('sayHello()', function(){
     it('function should return hello', function(){
         assert.equal(sayHello(), 'hello')
+    })
+    it('function should return a string', function(){
         assert.isString(sayHello(), 'c bien une string')
+        // ? l'un ou l'autre -> assert.typeOf(sayHello(), 'string');
+    })
+})
+
+describe('getUsers()', function(){
+    it('function should return an array', function(){
+        assert.isArray(getUsers(), 'c\'est un tableau')
+    })
+    it('function should return 6 items', function(){
+        assert.lengthOf(getUsers(), 6, 'possède 6 items')
     })
 })
