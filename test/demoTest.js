@@ -1,5 +1,5 @@
 import { assert } from 'chai'
-import { sum, sayHello, getUsers } from '../demo/demo.js'
+import { sum, sayHello, getUsers, getCaptain } from '../demo/demo.js'
 
 describe('sum()', function(){
     it('sum should return a+b', function(){
@@ -23,5 +23,11 @@ describe('getUsers()', function(){
     })
     it('function should return 6 items', function(){
         assert.lengthOf(getUsers(), 6, 'possède 6 items')
+    })
+})
+
+describe('getCaptain()', function(){
+    it('getCaptain should return luffy', function(){
+        assert.equal(getCaptain(), 'luffy');
     })
 })

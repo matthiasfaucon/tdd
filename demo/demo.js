@@ -11,7 +11,8 @@ export function getUsers(){
     return users;
 }
 
-describe('getUsers()', function(){
-    // TODO: Doit être un tableau
-    // TODO: Doit avoir une longueur de 6
-})
+export function getCaptain(){
+    const users = ["luffy", "zoro", "sanji", "usopp", "chopper", "nami"]
+    let captain = users.filter(user => user === "luffy")
+    return captain
+}
