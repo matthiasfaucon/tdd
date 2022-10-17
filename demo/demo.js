@@ -16,3 +16,9 @@ export function getCaptain(){
     let captain = users.filter(user => user === "luffy")
     return captain
 }
+
+export function checkTip(a,b){
+    const coupon = a*b/a
+    return coupon
+
+}
